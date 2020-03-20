@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: rgb(255, 255, 255);
+    }
+.contain{
+    margin-top: 140px;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: crimson;
+    padding: 5%;
+    border: 5px solid rgb(8, 8, 8);
+    box-shadow: 0px 25px 25px rgb(0, 0, 0);
+    word-spacing: 4px;
+    text-shadow: 2px 2px 5px rgb(22, 22, 22);
+}
+h2{
+    font-size: 30px;
+}
+input{
+    padding: 2px;
+    display: block;
+    margin: auto;
+    outline: none;
+    border: 4px solid black;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: -10px -15px -15px black;
+}
+input:focus{
+    box-shadow: 10px 15px 15px black;
+}
+.im{
+    padding: 10%;
+    border: 5px solid rgb(32, 32, 32);
+    display: block;
+    width: 75%;
+    height: 100%;
+    box-shadow: 0px 15px 15px black;
+    margin: auto;
+    margin-top: 10px;
+}
+button{
+    padding: 8px;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(48, 48, 48);
+    border: 2px solid rgb(39, 39, 39);
+    font-size: 18px;    box-shadow: 0px 15px 15px black;
+}
+button:hover{
+    box-shadow: 0px 0px 0px black;
+}
+img{
+    display: block;
+    padding: 2%;
+    display: inline-block;
+    width: 95%;
+    height: 100%;
+}
+}
+</style>
+<body>
+    <div class="contain">
+       
+            <h2>ENTER YOU NAME AND CHECK YOUR AVATAR</h2>
+        <input type="text" class="nameid" required>
+        
+        <div class="im">
+         
+    <img src="1.png" alt="logo" class="pic">
+
+        </div>
+        <button>CLICK   
+</button>
+   
+    </div>
+    <div id="particles-js">
+    </div>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function()
+            {
+              
+                const name = $('.nameid').val();
+                $('.pic').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+            });
+        });
+    </script>
+        <script type="text/javascript" src="particles.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
